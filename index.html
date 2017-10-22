@@ -1,15 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="main.css">
-  <title>mario</title>
-</head>
-<body>
+<!doctype html>
 
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		
+		<link rel="stylesheet" href="main.css">
+		 <script src="https://d3js.org/d3.v3.min.js">
+    </script>
+    
+	</head>
+
+	<body>
+<!--啟動練習-->
+
+<p></p>
+
+
+<input type="button" onclick="launch()" value="啟動">
+
+ 
+  
+ 
+ <script>
+        
+  function launch(){
+    d3.select('p').text(random(1911,2016));
+  }
+
+
+
+function random(n,m){
+    return Math.ceil(Math.random()*(m-n)+n);
+}
+
+
+
+
+ </script>
    
-   <div class="box">
+<!--瑪利歐水管練習-->
+
+  <div class="box">
     <img src="https://spencerfsu15.files.wordpress.com/2015/09/mario_8bit.png" alt="" width="100">
     </div>
 
@@ -27,5 +60,54 @@ margin: 100px 0 0 100px;"></div>
 
 
 
-</body>
+<br>
+
+<hr>
+
+<!--長條圖練習-->
+
+<svg width="400" height="300">
+       
+</svg>
+<script>
+    
+    
+
+for(var i=0; i<20; i++){
+  var thisNum = random(20,300);
+  d3.select("svg")
+    .append("rect")
+    .attr({
+    x: 10,
+    y: 10+12*i,
+    width: thisNum,
+    height: 10,
+    fill: "red"
+  });
+  d3.select("svg")
+    .append("text")
+    .attr({
+    x: thisNum+15,
+    y: 20+12*i,
+    "font-size": 12
+  }).text(thisNum);
+}
+
+
+
+
+function random(n,m){
+  return Math.ceil(Math.random()*(m-n)+n);
+}    
+
+    
+    
+</script>
+
+<a href="page1.html" target= "new">折線圖與c d e f g a 的 a</a>
+  
+
+
+
+	</body>
 </html>
