@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script src="https://d3js.org/d3.v3.min.js">
+    </script>
+    
+    
+	</head>
+
+	<body>
+	
+
+	
+<svg width="400" height="300">
+       
+</svg>
+<script>
+    
+    var lastNum = 0;
+var points = "10,10 "; 
+
+for(var i=0; i<20; i++){
+  var thisNum = random(20,300);
+  
+  points = points+(10+thisNum)+","+(10+12*(i+1))+" ";
+  
+  d3.select("svg")
+    .append('circle')
+    .attr({
+    cx: 10+thisNum,
+    cy: 10+12*(i+1),
+    r: 3,
+    fill: "red"
+  });
+
+  d3.select("svg")
+    .append("text")
+    .attr({
+    x: thisNum+20,
+    y: 25+12*i,
+    "font-size": 12
+  }).text(thisNum);
+  lastNum = thisNum ;
+}
+points = points+"10,"+(21*12+10);
+
+d3.select("svg")
+    .append("polyline")
+    .attr({
+      "points": points,
+      "fill": "rgba(0,0,0,0)",
+      "stroke": "#333",
+    });
+
+function random(n,m){
+  return Math.ceil(Math.random()*(m-n)+n);
+}    
+
+</script>
+
+
+
+<hr>
+  
+   <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" id="svg_1" height="129" width="400" y="102.5" x="121.5" stroke-width="1.5" fill="#fdf5e6"/>
+  <path id="svg_2" d="m152.5,121.5" opacity="0.5" stroke-width="1.5" stroke="#000" fill="#ffd4aa"/>
+  <g id="svg_10">
+   <line stroke-linecap="null" stroke-linejoin="null" id="svg_5" y2="197.5" x2="509.50709" y1="197.5" x1="227.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+   <line stroke-linecap="null" stroke-linejoin="null" id="svg_6" y2="117.5" x2="429.50709" y1="117.5" x1="147.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+   <line stroke-linecap="null" stroke-linejoin="null" id="svg_7" y2="137.5" x2="449.50709" y1="137.5" x1="167.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+   <line stroke-linecap="null" stroke-linejoin="null" id="svg_8" y2="157.5" x2="469.50709" y1="157.5" x1="187.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+   <line stroke-linecap="null" stroke-linejoin="null" id="svg_9" y2="177.5" x2="489.50709" y1="177.5" x1="207.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  </g>
+  <ellipse stroke="#000" ry="9.69118" rx="9.69118" id="svg_12" cy="167.16176" cx="251.19118" stroke-opacity="null" stroke-width="1.5" fill="#000000"/>
+  <rect stroke="#000" id="svg_13" height="48.17647" width="1.23529" y="121.2647" x="260.26471" stroke-opacity="null" stroke-width="1.5" fill="#000000"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_15" y="224.5" x="238.5" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Ａ</text>
+ </g>
+</svg>
+    
+
+<a href="index.html" target= "new">返回前夜</a>
+  
+
+
+	</body>
+</html>
